@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-@main
 struct Swift_UIApp: App {
     let persistenceController = PersistenceController.shared
 
