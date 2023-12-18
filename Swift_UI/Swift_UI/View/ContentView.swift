@@ -17,41 +17,7 @@ struct ContentView: View {
 //    private var items: FetchedResults<Item>
 //
     var body: some View {
-        
-        VStack {
-            MapView()
-                .frame(height: 300)
-            CircleImage()
-                .offset(y: -((UIScreen.main.bounds.height / 7)))
-                .padding(.bottom, -130)
-            VStack(alignment: .leading) {
-                Text("Hello SwiftUI")
-                    .font(.title3)
-                    .foregroundColor(.blue)
-                    .multilineTextAlignment(.center)
-                    .padding(2)
-                HStack {
-                    Text("Joshua Tree National Park")
-                        .font(.subheadline)
-                    Spacer()
-                    Text("California")
-                        .font(.subheadline)
-                }
-                .font(.subheadline)
-                .foregroundColor(.secondary)
-                
-                Divider()
-                
-                Text("About Turtle Rock")
-                    .font(.title2)
-                    .padding(2)
-                Text("Descriptive text goes here.")
-                    .foregroundColor(.secondary)
-                
-            }
-            .padding()
-            Spacer()
-        }
+        LandmarkList()
     }
     //
 //    private func addItem() {
@@ -95,6 +61,6 @@ private let itemFormatter: DateFormatter = {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+        ContentView().environmentObject(ModelData())
     }
 }
