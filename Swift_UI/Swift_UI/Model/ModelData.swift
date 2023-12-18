@@ -11,6 +11,16 @@ import SwiftUI
 class ModelData: ObservableObject {
     var landmarks: [Landmark] = landmarkData()
     
+    var features: [Landmark] {
+        landmarks.filter({ $0.isFeatured })
+    }
+    
+    var categories: [String: [Landmark]] {
+        Dictionary (
+            grouping: landmarks,
+            by: { $0.category.rawValue }
+        )
+    }
 }
 
 
@@ -46,7 +56,9 @@ func landmarkData() -> [Landmark] {
                  description: "",
                  imageName: "anh1",
                  coordinates: Landmark.Coordinates(lat: 34.011286, long: -116.166868),
-                    isFavourite: true),
+                     isFavourite: true,
+                     isFeatured: true,
+                     category: .lakes),
             
             Landmark(id: 1002,
                          name: "Silver Salmon Creek",
@@ -55,7 +67,9 @@ func landmarkData() -> [Landmark] {
                          description: "",
                          imageName: "anh2",
                          coordinates: Landmark.Coordinates(lat: 59.980167, long: -152.665167),
-                     isFavourite: false),
+                     isFavourite: false,
+                     isFeatured: true,
+                     category: .lakes),
             
             Landmark(id: 1003,
                          name: "Chilkoot Trail",
@@ -64,6 +78,8 @@ func landmarkData() -> [Landmark] {
                          description: "",
                          imageName: "anh3",
                          coordinates: Landmark.Coordinates(lat: 59.980167, long: -135.334571),
-                     isFavourite: true),
+                     isFavourite: true,
+                     isFeatured: true,
+                     category: .lakes),
     ]
 }

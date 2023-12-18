@@ -16,6 +16,14 @@ struct Landmark: Hashable, Codable, Identifiable {
     var state: String
     var description: String
     var isFavourite: Bool
+    var isFeatured: Bool
+
+    var category: Category
+    enum Category: String, CaseIterable, Codable {
+        case lakes = "Lakes"
+        case rivers = "Rivers"
+        case mountains = "Mountains"
+    }
     
     private var imageName: String
     var image: Image {
@@ -35,7 +43,7 @@ struct Landmark: Hashable, Codable, Identifiable {
         var long: Double
     }
     
-    init(id: Int, name: String, park: String, state: String, description: String, imageName: String, coordinates: Coordinates, isFavourite: Bool) {
+    init(id: Int, name: String, park: String, state: String, description: String, imageName: String, coordinates: Coordinates, isFavourite: Bool, isFeatured: Bool, category: Category) {
         self.id = id
         self.name = name
         self.park = park
@@ -44,5 +52,7 @@ struct Landmark: Hashable, Codable, Identifiable {
         self.imageName = imageName
         self.coordinates = coordinates
         self.isFavourite = isFavourite
+        self.isFeatured = isFeatured
+        self.category = category
     }
 }

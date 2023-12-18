@@ -11,7 +11,7 @@ import MapKit
 
 struct LandmarkDetail: View {
     @EnvironmentObject var modelData: ModelData
-    var landmark: Landmark
+    @State var landmark: Landmark
     
     var landmarkIndex: Int {
         modelData.landmarks.firstIndex(where: { $0.id == landmark.id })!
@@ -33,7 +33,7 @@ struct LandmarkDetail: View {
                         .foregroundColor(.blue)
                         .multilineTextAlignment(.center)
                     .padding(2)
-                    FavoriteButton(isSet: modelData.landmarks[landmarkIndex].isFavourite)
+                    FavoriteButton(isSet: $landmark.isFavourite)
                 }
                 
                 HStack {
