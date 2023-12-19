@@ -10,6 +10,7 @@ import SwiftUI
 
 class ModelData: ObservableObject {
     var landmarks: [Landmark] = landmarkData()
+    var profile = Profile.default
     
     var features: [Landmark] {
         landmarks.filter({ $0.isFeatured })
