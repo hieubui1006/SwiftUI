@@ -93,6 +93,12 @@
 		B26F45BB2B316C62005D81A0 /* FeatureCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureCard.swift; sourceTree = "<group>"; };
 		B26F45BD2B316E63005D81A0 /* PageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageView.swift; sourceTree = "<group>"; };
 		B26F45BF2B31724C005D81A0 /* PageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageControl.swift; sourceTree = "<group>"; };
+		B2C0263A2B334850002E83B6 /* PublishersAndSubscribers.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = PublishersAndSubscribers.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		B2C0263C2B335086002E83B6 /* Subjects.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Subjects.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		B2C0263D2B3407BA002E83B6 /* Operators.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Operators.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		B2C0263E2B34098F002E83B6 /* Combining.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Combining.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		B2C0263F2B340C1A002E83B6 /* Scan.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Scan.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		B2C026402B340C88002E83B6 /* Schedulers.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Schedulers.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +129,7 @@
 		B23FCBAB2B2DF1D70093F1FF = {
 			isa = PBXGroup;
 			children = (
+				B2C026382B33481C002E83B6 /* Combine */,
 				B23FCBB62B2DF1D70093F1FF /* Swift_UI */,
 				B23FCBCD2B2DF1D80093F1FF /* Swift_UITests */,
 				B23FCBD72B2DF1D80093F1FF /* Swift_UIUITests */,
@@ -240,6 +247,19 @@
 				B26F45BF2B31724C005D81A0 /* PageControl.swift */,
 			);
 			path = FrameworkIntergration;
+			sourceTree = "<group>";
+		};
+		B2C026382B33481C002E83B6 /* Combine */ = {
+			isa = PBXGroup;
+			children = (
+				B2C0263A2B334850002E83B6 /* PublishersAndSubscribers.playground */,
+				B2C0263C2B335086002E83B6 /* Subjects.playground */,
+				B2C0263D2B3407BA002E83B6 /* Operators.playground */,
+				B2C0263E2B34098F002E83B6 /* Combining.playground */,
+				B2C0263F2B340C1A002E83B6 /* Scan.playground */,
+				B2C026402B340C88002E83B6 /* Schedulers.playground */,
+			);
+			path = Combine;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
